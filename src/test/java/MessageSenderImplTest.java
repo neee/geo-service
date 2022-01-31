@@ -82,24 +82,4 @@ public class MessageSenderImplTest {
 
         Assertions.assertTrue(result.contains(expected));
     }
-    @ParameterizedTest
-    @ValueSource(strings = {"172.", "96.", "172.0.32.11", "127.0.0.1", "96.44.183.149"})
-    void testLocalhostNull(String ip) {
-        Country testCountry = Country.USA;
-        Map<String,String> headers = new HashMap<>();
-        headers.put(IP_ADDRESS_HEADER, ip);
-
-        LocalizationServiceImpl localizationService = Mockito.spy(LocalizationServiceImpl.class);
-        String expected = localizationService.locale(testCountry);
-
-        Location location = Mockito.mock(Location.class);
-        Mockito.when(location.getCountry()).thenReturn(testCountry);
-
-        GeoServiceImpl geoService = Mockito.spy(GeoServiceImpl.class);
-        Mockito.when(geoService.byIp(ip)).thenCallRealMethod();
-
-        MessageSenderImpl messageSender = new MessageSenderImpl(geoService, localizationService);
-        String result = messageSender.send(headers);
-
-    }
 }
