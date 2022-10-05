@@ -29,7 +29,7 @@ public class Location {
         return street;
     }
 
-    public int getBuiling() {
+    public int getBuilding() {
         return builing;
     }
 }
