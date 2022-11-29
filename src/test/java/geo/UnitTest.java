@@ -9,7 +9,7 @@ import ru.netology.entity.Location;
 import ru.netology.geo.GeoService;
 import ru.netology.geo.GeoServiceImpl;
 
-public class UnitTests {
+public class UnitTest {
     private static Location locationMock;
     private static GeoService geoServiceMock;
     private static GeoService geoService;

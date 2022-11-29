@@ -15,7 +15,7 @@ import ru.netology.sender.MessageSenderImpl;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UnitTests {
+public class UnitTest {
     private static final Map<String, String> headers = new HashMap<>();
     private static MessageSender messageSender;
     private static GeoService geoServiceMock;

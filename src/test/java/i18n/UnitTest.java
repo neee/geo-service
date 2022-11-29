@@ -11,7 +11,7 @@ import ru.netology.geo.GeoServiceImpl;
 import ru.netology.i18n.LocalizationService;
 import ru.netology.i18n.LocalizationServiceImpl;
 
-public class UnitTests {
+public class UnitTest {
     private static LocalizationService localizationServiceMock;
     private static LocalizationService localizationService;
     private static Location locationMock;
